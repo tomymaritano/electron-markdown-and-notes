@@ -1,0 +1,102 @@
+/* notes.css */
+
+.notes-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.notes-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #4da6ff;
+}
+
+.notes-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.notes-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.notes-button:hover {
+  background: #0056b3;
+}
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-item {
+  background: #444;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🔥 Nota completada: Subrayada y gris */
+.note-item.completed .note-text {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Alineación de botones */
+.note-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botón de editar */
+.edit-button {
+  background: #fbc02d;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-button:hover {
+  background: #f9a825;
+}
+
+/* Botón de eliminar */
+.delete-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background: darkred;
+}

@@ -1,12 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tsconfigPaths from "vite-tsconfig-paths"; // 🔥 Permitir alias de TypeScript
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tsconfigPaths()],
   server: {
-    port: 5173, // Asegurar que corre en el puerto correcto
-    esbuild: {
-      loader: "jsx", // 🔥 Permitir JSX en archivos .js
+    port: 5173,
+  },
+  resolve: {
+    alias: {
+      "@chakra-ui/react": "@chakra-ui/react", // ✅ Alias Correcto (Evita alias incorrectos)
     },
   },
 });
